@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heladería Cerdeco</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <header>
+        <section class="header__section">
+            <img id="logo" src="imgs/logo.png" width="250px">
+        </section>
+    </header>
+    <main>
+        <div class="modalInicio modalInicio--active">
+            <h2>Cargando...</h2>
+            <div class="lds-hourglass"></div>
+        </div>
+        <section class="main__section">
+            <div id="div1" class="main__section__div">
+                <button id="button1">REALIZAR PEDIDO</button>
+                <div class="contenedorModal">
+                    <div class="contenedorModal__modal">
+                    </div>
+                    <div class="buttonsmodal">
+                        <button id="button2">Atrás</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="div2" class="main__section__div">
+                <div class="divCarrito"><p>TU PEDIDO</p>
+                </div>
+                <div class="divInfoCarrito">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="totalLimpiar">
+                    <div class="totalPedido">
+                        <p>TOTAL: </p>
+                    </div>
+                    <button class="clearCarrito">VACIAR CARRITO</button>
+                </div>
+            </div>
+
+            <div id="div3" class="main__section__div">
+                <div class="divEstado1">
+                    <div class="divEstado1">ESTADO</div>
+                </div>
+            </div>
+
+
+            <div id="div4" class="main__section__div">
+                <button id="button6">IR A PAGAR</button>
+                <div class="modalPagar">
+                    <div class="modalPagar__modal">
+                        <form id="formulario">
+                            <label for="nombre">Ingrese su nombre</label>
+                            <input type="text" id="nombre">
+
+                            <label for="apellido">Ingrese su Apellido</label>
+                            <input type="text" id="apellido">
+
+                            <label for="dni">Ingrese su DNI</label>
+                            <input type="number" id="dni">
+
+                            <label for="tipotarjeta">Ingrese el tipo de tarjeta</label>
+                            <select name="tipo" id="tipotarjeta">
+                                <option>MasterCard</option>
+                                <option>Visa</option>
+                                <option>American Express</option>
+                                <option>Discover</option>
+                                <option>UnionPay </option>
+                            </select>
+                            <label for="numtarjeta">Ingrese el número de la tarjeta</label>
+                            <input type="text" id="numtarjeta">
+
+                        </form>
+                        <button id='botonPagar'>Pagar</button>
+                    </div>
+                    <button class="button7">Atrás</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

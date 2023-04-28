@@ -1,0 +1,706 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../imgs/fondopag.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+header{
+    padding: 15px;
+}
+
+main, .header__section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__section{
+    background-color:hsla(164, 73%, 44%, 0.32); 
+    width: 60%;
+    border:5px solid  hsla(164, 73%, 44%, 0.270);
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 5px hsla(164, 73%, 44%, 0.270);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#div1{
+    border: 5px solid hsla(164, 73%, 44%, 0.270);
+    border-radius: 15px 0px 0px 0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#div2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid hsla(164, 73%, 44%, 0.270);
+    border-radius: 0px 15px 0px 0px;
+    display:flex;
+}
+#div3{
+    border: 5px solid hsla(164, 73%, 44%, 0.270);
+    border-radius: 0px 0px 0px 15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#div4{
+    border: 5px solid hsla(164, 73%, 44%, 0.270);
+    border-radius: 0px 0px 15px 0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorModal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: hsla(164, 73%, 44%, 0.32);
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.contenedorModal--active{
+    opacity: 1;
+    pointer-events: unset;
+    transition: 0.5s;
+}
+
+.contenedorModal__modal{
+    background-color: hsla(164, 73%, 44%, 0.270);
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 70%;
+    box-shadow: 1px 1px 20px 1px black;
+    border:10px solid hsla(0, 0%, 4%, 0.27);
+    padding: 15px;
+    overflow-y: scroll;
+    padding: 0px 20px 20px 20px;
+}
+
+.buttonsmodal{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+/*BOTONES*/
+
+#button1{
+    width: 300px;
+    height: 150px;
+    font-size: 2.2rem;
+    background-color: rgb(255, 221, 158, 0.781);
+    border: 10px solid hsla(164, 73%, 44%, 0.792);
+    border-radius: 30px 0px 30px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#button1:hover{
+    background-color: black;
+    color:white;
+}
+
+#button2{
+    width: 200px;
+    height: 100px;
+    font-size: 2.2rem;
+    background-color: rgb(255, 221, 158, 0.781);
+    border: 10px solid hsla(164, 73%, 44%, 0.792);
+    border-radius: 20px 20px 20px 20px;
+    margin: 0 20px;
+    transition: 0.5s;
+}
+
+#button2:hover{
+    background-color: black;
+    color:wheat;
+}
+
+#button6{
+    width: 300px;
+    height: 150px;
+    font-size: 2.2rem;
+    background-color: rgb(255, 221, 158, 0.781);
+    border: 10px solid hsla(164, 73%, 44%, 0.792);
+    border-radius: 20px 0px 20px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#button6:hover{
+    background-color: black;
+    color:wheat;
+}
+
+/* SECCION PEDIR HELADO */
+
+.divHeladoInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: white;
+    justify-items: center;
+    padding: 15px;
+    height: 100px;
+    box-shadow: 1px 1px 2px 1px black;
+    margin-top: 20px;
+    transition: 0.3s;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#nombreHelado, #precioHelado, #litroHelado{
+    align-self: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+}
+
+#imagenHelado{
+    align-self: center;
+}
+
+.divHeladoInfo:hover{
+    background-color: rgb(138, 90, 0, 0.781);
+    color:whitesmoke;
+}
+
+/* SECCION CARRITO */
+
+.divCarrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 75px;
+    font-size: 2.2rem;
+    background-color: hsla(164, 73%, 44%, 0.092);
+    border: 10px solid hsla(164, 73%, 44%, 0.792);
+    border-radius: 20px 0px 20px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    transition: 0.5s;
+}
+
+
+
+.divInfoCarrito{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 200px;
+    background-color: rgba(228, 225, 218, 0.62);
+    border:5px solid  hsla(164, 73%, 44%, 0.792);
+    overflow-y: scroll;
+}
+
+.totalPedido {
+    background-color: rgba(228, 225, 218, 0.62);
+    width: 130px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.totalLimpiar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.clearCarrito{
+    background-color: rgb(255, 221, 158, 0.781);
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    height: 34px;
+    border:4px solid  hsla(164, 73%, 44%, 0.792);
+    padding: 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+.clearCarrito:hover{
+        background-color: black;
+        color:wheat;
+}
+
+
+/* SECCION ESTADO */
+
+#div3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.divEstado1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 75px;
+    font-size: 2.2rem;
+    background-color: hsla(164, 73%, 44%, 0.32);
+    border: 10px solid hsla(164, 73%, 44%, 0.792);
+    border-radius: 20px 0px 20px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+
+.divEstado3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+}
+
+/* li appendeado */
+
+.liashei {
+    text-decoration: none;
+    list-style: none;
+    font-size: larger;
+    padding: 2.5px;
+    margin-left: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* modal ir a pagar */
+
+.modalPagar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.modalPagar--active{
+    opacity: 1;
+    pointer-events: unset;
+    transition: 0.5s;
+}
+
+.modalPagar__modal{
+    background-color: rgb(255, 221, 158, 0.781);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 70%;
+    box-shadow: 1px 1px 20px 1px black;
+    border:10px solid hsla(164, 73%, 44%, 0.792);
+    padding: 0px 20px 20px 20px;
+}
+
+.button7{
+    width: 200px;
+    height: 100px;
+    font-size: 2.2rem;
+    background-color: rgb(255, 194, 80, 0.781);
+    border: 10px solid hsla(164, 73%, 44%, 0.792);
+    border-radius: 20px 20px 20px 20px;
+    margin: 0 20px;
+    transition: 0.5s;
+    margin-top: 30px;
+}
+
+.button7:hover{
+    background-color: black;
+    color:wheat;
+}
+
+/* loading.io */
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid rgb(255, 36, 207);
+    border-color: rgb(255, 36, 207) transparent rgb(255, 36, 207) transparent;
+    animation: lds-hourglass 1.2s infinite;
+  }
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+
+  /* modal inicio */
+
+  .modalInicio{
+    width: 100%;
+    height: 100vh;
+    inset: 0;
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imgs/modalinicio.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    pointer-events: none;
+    color:rgb(255, 134, 229);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 1s;
+  }
+
+  .modalInicio--active{
+    opacity: 1;
+    pointer-events: unset;
+  }
+
+  /* modal pagar */
+  #formulario{
+    display:flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    padding:15px;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+label{ 
+    margin-top: 30px;
+  }
+
+ #botonPagar{
+    width: 200px;
+    height: 100px;
+    font-size: 2.2rem;
+    background-color: rgba(81, 209, 76, 0.781);
+    border: 10px solid rgb(20, 87, 14);
+    border-radius: 20px 20px 20px 20px;
+    margin: 0 20px;
+    margin-top: 30px;
+    transition: 0.5s;
+ }
+
+ #botonPagar:hover{
+    background-color: rgb(0, 0, 0);
+    color:white;
+ }
+
+ .toast{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+ }
+
+ @media screen and (min-width:1280px) and (max-width:1440px){ 
+    header{
+        padding: 5px;
+    }
+    
+    .main__section{
+        width: 60%;
+    }
+    
+    .contenedorModal__modal{
+        width: 35%;
+    }
+    
+    /*BOTONES*/
+    #button1{
+        height: 125px;
+        font-size: 2rem;
+    }
+    
+    #button2{
+        width: 200px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    #button6{
+        height: 120px;
+        font-size: 2rem;
+    }
+    
+    .divHeladoInfo{
+        padding: 5px;
+        height: 80px;
+    }
+    
+    .divCarrito{
+        height: 75px;
+        font-size: 2rem;
+    }
+    
+    .divInfoCarrito{
+        height: 150px;
+    }
+    
+    .divEstado3, .divEstado1{
+        font-size: 2rem;
+    }
+
+    .modalPagar__modal{
+        height: 60%;
+
+    }
+    .button7{
+        height: 100px;
+        font-size: 2rem;
+        width: 150px;
+    }
+    
+    #formulario{
+        font-size: 1.3rem;
+        width: 100%;
+        font-weight: 500;
+    }
+    
+    label{ 
+        margin-top: 20px;
+    }
+    
+    #botonPagar{
+        height: 80px;
+        font-size: 2rem;
+     }
+ }
+
+ @media screen and (min-width:768px) and (max-width:1279px){
+
+    .main__section{
+        width: 60%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.6fr 1.4fr 0.5fr 0.5fr;
+        margin-bottom: 30px;
+    }
+
+    .contenedorModal__modal{
+        width: 80%;
+        height: 70%;
+    }
+    
+     #div1,#div2,#div3,#div4{
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    #button1{
+        width: 200px;
+        height: 100px;
+        font-size: 1.5rem;
+    }
+    
+    #button2{
+        height: 80px;
+    }
+    
+    #button6{
+        width: 200px;
+        height: 100px;
+        font-size: 1.5rem;
+    }
+    
+    .divCarrito{
+        width: 200px;
+        height: 75px;
+        font-size: 1.5rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .divInfoCarrito{
+        height: 180px;
+    }
+    
+    .totalPedido {
+        width: 130px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .divEstado1{
+        width: 180px;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    .divEstado3{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    .modalPagar__modal{
+        width: 60%;
+    }
+    
+    .button7{
+        width: 150px;
+        height: 100px;
+        font-size: 2rem;
+    }
+
+      #formulario{
+        font-size: 1.2rem;
+      }
+    
+ }
+
+ @media screen and (min-width:1px) and (max-width:767px){
+    body{
+            background-image: url('../imgs/fondomobile.jpg');
+    }
+
+    .main__section{
+        width: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1.4fr 0.5fr 0.5fr;
+    }
+
+    #logo {
+        width: 200px;
+    }
+
+    .contenedorModal__modal{
+        width: 90%;
+
+    }
+    
+     #div1,#div2,#div3,#div4{
+        border: 0px;
+    }
+
+    #button1{
+        width: 200px;
+        height: 75px;
+        font-size: 1rem;
+    }
+    
+    #button2{
+        height: 75px;
+    }
+    
+    #button6{
+        width: 180px;
+        height: 70px;
+        font-size: 1rem;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    
+    .divCarrito{
+        width: 200px;
+        height: 50px;
+        font-size: 1rem;
+        margin-top: 0px;
+        margin-bottom: 7px;
+    }
+    
+    .divInfoCarrito{
+        height: 150px;
+        font-size: 0.8rem;
+    }
+    
+    .totalPedido {
+        width: 130px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .divEstado1{
+        width: 180px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    .divEstado3{
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    .modalPagar__modal{
+        width: 80%;
+    }
+    
+    .button7{
+        width: 150px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+      #formulario{
+        font-size: 1rem;
+        width: 95%;
+      }
+    
+    #botonPagar{
+        height: 80px;
+    }
+
+    .toast{
+        font-size: 1rem;
+     }
+ }
+    
