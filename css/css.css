@@ -39,6 +39,7 @@ main, .header__section{
     justify-content: center;
     align-items: center;
 }
+
 #div2{
     display: flex;
     flex-direction: column;
@@ -48,6 +49,7 @@ main, .header__section{
     border-radius: 0px 15px 0px 0px;
     display:flex;
 }
+
 #div3{
     border: 5px solid hsla(164, 73%, 44%, 0.270);
     border-radius: 0px 0px 0px 15px;
@@ -55,6 +57,7 @@ main, .header__section{
     justify-content: center;
     align-items: center;
 }
+
 #div4{
     border: 5px solid hsla(164, 73%, 44%, 0.270);
     border-radius: 0px 0px 15px 0px;
@@ -206,8 +209,6 @@ main, .header__section{
     transition: 0.5s;
 }
 
-
-
 .divInfoCarrito{
     display: flex;
     flex-direction: column;
@@ -249,11 +250,11 @@ main, .header__section{
     padding: 5px;
     border-radius: 5px 5px 5px 5px;
 }
+
 .clearCarrito:hover{
         background-color: black;
         color:wheat;
 }
-
 
 /* SECCION ESTADO */
 
@@ -285,7 +286,6 @@ main, .header__section{
     font-size: 2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-
 }
 
 /* li appendeado */
@@ -360,8 +360,9 @@ main, .header__section{
     position: relative;
     width: 80px;
     height: 80px;
-  }
-  .lds-hourglass:after {
+}
+
+.lds-hourglass:after {
     content: " ";
     display: block;
     border-radius: 50%;
@@ -372,24 +373,25 @@ main, .header__section{
     border: 32px solid rgb(255, 36, 207);
     border-color: rgb(255, 36, 207) transparent rgb(255, 36, 207) transparent;
     animation: lds-hourglass 1.2s infinite;
-  }
-  @keyframes lds-hourglass {
+}
+
+@keyframes lds-hourglass {
     0% {
-      transform: rotate(0);
-      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
     50% {
-      transform: rotate(900deg);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     }
     100% {
-      transform: rotate(1800deg);
+    transform: rotate(1800deg);
     }
-  }
+}
 
-  /* modal inicio */
+/* modal inicio */
 
-  .modalInicio{
+.modalInicio{
     width: 100%;
     height: 100vh;
     inset: 0;
@@ -407,28 +409,29 @@ main, .header__section{
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     transition: 1s;
-  }
+}
 
-  .modalInicio--active{
+.modalInicio--active{
     opacity: 1;
     pointer-events: unset;
-  }
+}
 
-  /* modal pagar */
-  #formulario{
+/* modal pagar */
+
+#formulario{
     display:flex;
     flex-direction: column;
     font-size: 1.5rem;
     padding:15px;
     font-weight: bolder;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
+}
 
 label{ 
     margin-top: 30px;
-  }
+}
 
- #botonPagar{
+#botonPagar{
     width: 200px;
     height: 100px;
     font-size: 2.2rem;
@@ -438,20 +441,20 @@ label{
     margin: 0 20px;
     margin-top: 30px;
     transition: 0.5s;
- }
+}
 
- #botonPagar:hover{
+#botonPagar:hover{
     background-color: rgb(0, 0, 0);
     color:white;
- }
+}
 
- .toast{
+.toast{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.7rem;
     text-align: center;
- }
+}
 
- @media screen and (min-width:1280px) and (max-width:1440px){ 
+@media screen and (min-width:1280px) and (max-width:1440px){ 
     header{
         padding: 5px;
     }
@@ -465,6 +468,7 @@ label{
     }
     
     /*BOTONES*/
+
     #button1{
         height: 125px;
         font-size: 2rem;
@@ -522,10 +526,10 @@ label{
     #botonPagar{
         height: 80px;
         font-size: 2rem;
-     }
- }
+    }
+}
 
- @media screen and (min-width:768px) and (max-width:1279px){
+@media screen and (min-width:768px) and (max-width:1279px){
 
     .main__section{
         width: 60%;
@@ -539,7 +543,7 @@ label{
         height: 70%;
     }
     
-     #div1,#div2,#div3,#div4{
+    #div1,#div2,#div3,#div4{
         border-radius: 0px 0px 0px 0px;
     }
 
@@ -600,15 +604,15 @@ label{
         font-size: 2rem;
     }
 
-      #formulario{
+    #formulario{
         font-size: 1.2rem;
-      }
+    }
     
- }
+}
 
- @media screen and (min-width:1px) and (max-width:767px){
+@media screen and (min-width:1px) and (max-width:767px){
     body{
-            background-image: url('../imgs/fondomobile.jpg');
+        background-image: url('../imgs/fondomobile.jpg');
     }
 
     .main__section{
@@ -626,7 +630,7 @@ label{
 
     }
     
-     #div1,#div2,#div3,#div4{
+    #div1,#div2,#div3,#div4{
         border: 0px;
     }
 
@@ -690,10 +694,10 @@ label{
         font-size: 2rem;
     }
 
-      #formulario{
+    #formulario{
         font-size: 1rem;
         width: 95%;
-      }
+    }
     
     #botonPagar{
         height: 80px;
@@ -701,6 +705,6 @@ label{
 
     .toast{
         font-size: 1rem;
-     }
- }
+    }
+}
     
